@@ -215,7 +215,7 @@ proc run {argv} {
             ::run_jtag_tap
         }
         "lint" {
-            ::lint
+            ::lint $arg_dict
         }
         default {
             ::build $arg_dict
