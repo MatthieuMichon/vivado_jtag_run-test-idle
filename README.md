@@ -65,6 +65,18 @@ TAP run-test-idle tck count: 148717 (0x40024486)
 Difference after 100x `run_state_hw_jtag DRPAUSE` + `run_state_hw_jtag IDLE`: 103
 ```
 
+For reference:
+
+|      Instance      |    Module   | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
+|--------------------|-------------|------------|------------|---------|------|-----|--------|--------|------------|
+| shell              |       (top) |         88 |         88 |       0 |    0 | 302 |      0 |      0 |          0 |
+| - (shell)          |       (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+| - user_logic_i     |  user_logic |         88 |         88 |       0 |    0 | 302 |      0 |      0 |          0 |
+| -  - (user_logic_i) |  user_logic |         68 |         68 |       0 |    0 | 230 |      0 |      0 |          0 |
+| -  - tap_decoder_i  | tap_decoder |          2 |          2 |       0 |    0 |   9 |      0 |      0 |          0 |
+| -  - tap_encoder_i  | tap_encoder |         18 |         18 |       0 |    0 |  63 |      0 |      0 |          0 |
+
+
 ## Simulation
 
 ```

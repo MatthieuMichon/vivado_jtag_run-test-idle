@@ -32,7 +32,6 @@ proc ::build {arg_dict} {
 
     set directive RuntimeOptimized; # speed-run the build process
     synth_design -top shell \
-        -verilog_define USER_LOGIC_DEF=user_logic \
         -directive $directive \
         -flatten_hierarchy none \
         -debug_log -verbose
