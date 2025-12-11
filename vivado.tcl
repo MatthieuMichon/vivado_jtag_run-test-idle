@@ -148,7 +148,7 @@ proc ::run_jtag_tap {} {
         puts "TAP run-test-idle tck count: [format %d [expr ($readback_data_next & 0x0fffffff)]] ($readback_data)"
         puts "Difference after 100x `run_state_hw_jtag -state IDLE IDLE`: [format %d [expr ($readback_data_next - $readback_data)]]"
 
-    # Consecutive reads of idle counter value with 100x `run_state_hw_jtag -state IDLE IDLE` between
+    # Consecutive reads of idle counter value with 100x `run_state_hw_jtag IDLE` between
 
         scan_dr_hw_jtag 9 -tdi ${hex_cmd}; # extra bit for ARM DAP bypass
         run_state_hw_jtag IDLE; # run TAP through `UPDATE-DR` state
