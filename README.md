@@ -33,6 +33,10 @@ The table below summarizes expected vs actual behavior of different commands:
 
 # Getting Started
 
+Hardware:
+
+- ZC702 dev-kit
+
 Software vesions:
 
 - Vivado 2025.2 (Linux)
