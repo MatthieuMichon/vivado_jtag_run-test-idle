@@ -24,7 +24,8 @@ always_ff @(posedge tck) begin: capture_data
     end
 end
 
-// read somewhere that tdo should be updated on falling edge of tck
+// FIXME: Read somewhere that tdo should be updated on falling edge of tck,
+// idea is to trade some setup time slack for increasing hold-time margin.
 
 always_ff @(posedge tck) begin: shift_tdo
     if (test_logic_reset) begin
