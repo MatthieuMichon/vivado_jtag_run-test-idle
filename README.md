@@ -1,4 +1,4 @@
-Simple Verilator simulation and Vivado synthesis design showing non-expected behavior of the `run_state_hw_jtag -state IDLE IDLE` command.
+Simple simulation and synthesis design showing non-expected behavior in Vivado of the `run_state_hw_jtag -state IDLE IDLE` command.
 
 # Problem Description
 
