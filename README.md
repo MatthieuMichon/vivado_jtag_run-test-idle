@@ -38,26 +38,6 @@ Software vesions:
 - Vivado 2025.2 (Linux)
 - Verilator 5.034
 
-## Simulation
-
-```
-make sim
-```
-
-Result:
-
-```
-TAP run-test-idle tck count:        27 (0x4000001b)
-TAP run-test-idle tck count:        30 (0x4000001e)
-Difference:         3
-TAP run-test-idle tck count:        33 (0x40000021)
-TAP run-test-idle tck count:       136 (0x40000088)
-Difference after 100x `run_state_hw_jtag(RUN_TEST_IDLE)`:       103
-TAP run-test-idle tck count:       139 (0x4000008b)
-TAP run-test-idle tck count:       242 (0x400000f2)
-Difference after 100x `run_state_hw_jtag(PAUSE_DR -> RUN_TEST_IDLE)`:       103
-```
-
 ## Synthesis + On-board Execution
 
 ```
@@ -78,3 +58,25 @@ TAP run-test-idle tck count: 148614 (0x40024486)
 TAP run-test-idle tck count: 148717 (0x40024486)
 Difference after 100x `run_state_hw_jtag DRPAUSE` + `run_state_hw_jtag IDLE`: 103
 ```
+
+## Simulation
+
+```
+make sim
+```
+
+Result:
+
+```
+TAP run-test-idle tck count:        27 (0x4000001b)
+TAP run-test-idle tck count:        30 (0x4000001e)
+Difference:         3
+TAP run-test-idle tck count:        33 (0x40000021)
+TAP run-test-idle tck count:       136 (0x40000088)
+Difference after 100x `run_state_hw_jtag(RUN_TEST_IDLE)`:       103
+TAP run-test-idle tck count:       139 (0x4000008b)
+TAP run-test-idle tck count:       242 (0x400000f2)
+Difference after 100x `run_state_hw_jtag(PAUSE_DR -> RUN_TEST_IDLE)`:       103
+```
+
+![](wave.png)
